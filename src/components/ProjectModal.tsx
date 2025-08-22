@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, Download, X } from "lucide-react"
+import { Github, Download, X, Eye } from "lucide-react"
 
 interface Project {
   id: string
@@ -86,8 +86,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               className="flex items-center gap-2"
               onClick={() => window.open(project.reportUrl, '_blank')}
             >
-              <Download className="h-4 w-4" />
-              Download Report
+              <Eye className="h-4 w-4" />
+              View Report
             </Button>
           </div>
         </div>
