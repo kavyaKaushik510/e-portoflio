@@ -32,14 +32,9 @@ export function HomePage() {
               driven by the endless possibilities at the intersection of hardware and software innovation.
             </p>
             <p>
-              My journey has led me through embedded systems, AI development, and full-stack engineering, 
+              My journey has led me through embedded systems, AI development, and full-stack software development, 
               where I transform complex problems into elegant, practical solutions. From autonomous robots 
               to computer vision systems, I thrive on building technology that makes a meaningful impact.
-            </p>
-            <p>
-              When I'm not immersed in code or circuit design, you'll find me leading the Google Developer 
-              Student Club, mentoring fellow engineers, or exploring the latest advances in machine learning 
-              and robotics.
             </p>
           </div>
         </div>

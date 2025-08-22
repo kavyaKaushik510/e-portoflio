@@ -55,7 +55,7 @@ export function ContactSection() {
             Let's <span className="text-primary">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
-            Ready to collaborate? Drop me a message and let's discuss how we can work together.
+             I’m open to opportunities and collaboration, so feel free to reach out.
           </p>
         </div>
 

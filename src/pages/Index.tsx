@@ -8,18 +8,9 @@ import { ContactPage } from "@/components/ContactPage";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold text-primary">Kavya Kaushik</div>
-          </div>
-        </div>
-      </header>
-
       {/* Main Content with Tabs */}
       <Tabs defaultValue="home" className="w-full">
-        <div className="border-b border-border bg-background-secondary sticky top-16 z-40">
+        <div className="border-b border-border bg-background-secondary sticky top-0 z-40">
           <div className="container mx-auto px-6">
             <TabsList className="grid w-full grid-cols-4 bg-transparent h-16">
               <TabsTrigger 

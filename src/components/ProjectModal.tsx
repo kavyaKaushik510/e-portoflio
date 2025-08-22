@@ -13,6 +13,7 @@ interface Project {
   githubUrl: string
   reportUrl: string
   skills: string[]
+  course: string // ✅ add this
 }
 
 interface ProjectModalProps {
@@ -51,6 +52,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <DialogTitle className="text-2xl font-bold text-primary">
               {project.title}
             </DialogTitle>
+              {/* course visible only in modal */}
+            <p className="text-sm text-muted-foreground mt-1">
+              {project.course}
+            </p>
           </DialogHeader>
 
           <div className="flex flex-wrap gap-2">

@@ -23,6 +23,7 @@ interface Project {
   githubUrl: string;
   reportUrl: string;
   skills: string[];
+  course: string; // ✅ NEW
 }
 
 const projects: Project[] = [{
@@ -31,60 +32,66 @@ const projects: Project[] = [{
   image: projectBongi,
   techStack: ["C++", "Computer Vision", "ESP32-CAM", "Python"],
   description: "A remote-controlled robot built for the conservation of African Penguins using the ESP32-CAM for guano collection.",
-  fullDescription: "B.O.N.G.I is an innovative conservation project designed to help protect African Penguins through autonomous guano collection. The robot utilizes an ESP32-CAM module for real-time video streaming and AI-powered computer vision to identify and navigate to guano deposits. Built with C++ for optimal performance on embedded systems, the project demonstrates advanced integration of hardware and software for environmental conservation. The system features remote control capabilities, autonomous navigation algorithms, and real-time data collection to support penguin habitat management.",
+  fullDescription: "B.O.N.G.I. is a remotely operated robotic system designed for the conservation of African Penguins. The robot integrates a 3D-printed chassis, a servo-actuated scraping mechanism, and an ESP32-CAM module for live video streaming. Controlled over Wi-Fi via a custom web interface, the robot enables researchers to collect guano samples without disturbing moulting penguins. The project combined embedded systems programming (C++/Arduino), real-time camera streaming, and GUI design, while ensuring robustness in outdoor environments. The prototype passed 33/35 acceptance tests, demonstrating reliable navigation, scraping, and video feedback. This project highlighted how affordable robotics can support ethical wildlife monitoring and conservation.",
   githubUrl: "https://github.com/kavyaKaushik510/B.O.N.G.I",
   reportUrl: "/reports/BONGI.pdf",
-  skills: ["Embedded Systems", "C++", "Computer Vision", "ESP32", "AI Detection", "Environmental Conservation"]
+  skills: ["Embedded Systems", "C++", "Computer Vision", "ESP32", "AI Detection", "Environmental Conservation"],
+  course: "EEE4113F – Design Project" //
 }, {
   id: "2",
   title: "Image Edge Detection Processing using FPGAs",
   image: projectFPGA,
   techStack: ["VHDL", "FPGA", "Image Processing"],
   description: "A hardware accelerator for image denoising and edge detection using a median filter and Sobel operator.",
-  fullDescription: "This project implements a comprehensive hardware solution for real-time image processing using FPGA technology. The system combines median filtering for noise reduction with Sobel edge detection algorithms, all implemented in VHDL for maximum performance. The hardware accelerator processes grayscale images efficiently, demonstrating the power of parallel processing in FPGAs for computationally intensive tasks. The project showcases advanced digital design principles, memory management, and pipeline optimization for high-throughput image processing applications.",
+  fullDescription: "This project developed a high-performance digital accelerator for real-time image enhancement on FPGA hardware. The pipeline combined a 3×3 median filter to remove salt-and-pepper noise with Sobel edge detection for sharp boundary extraction. MATLAB served as a golden reference before translation into Verilog HDL and deployment on a Xilinx Spartan A7 FPGA. By exploiting parallelism, the design achieved a 189× speed-up compared to a software implementation, processing images in just 2.65 ms. The project also explored pipeline optimization, hardware resource trade-offs, and validation across multiple test images. It demonstrated the benefits of FPGA acceleration for computer vision tasks in robotics, surveillance, and embedded AI.",
   githubUrl: "https://github.com/kavyaKaushik510/Image-Edge-Detection-Processing-using-FPGAs",
   reportUrl: "/reports/yoda.pdf",
-  skills: ["VHDL", "FPGA Design", "Digital Signal Processing", "Hardware Acceleration", "Image Processing"]
+  skills: ["VHDL", "FPGA Design", "Digital Signal Processing", "Hardware Acceleration", "Image Processing"],
+   course: "EEE4120F – High Performance Embedded Systems"
 }, {
   id: "3",
   title: "CPU Processes Scheduler",
   image: projectScheduler,
   techStack: ["Java", "Operating Systems", "Schedulers", "Simulation"],
   description: "A Java-based operating systems simulator implementing FCFS, SJF, and RR scheduling for simulated customer orders.",
-  fullDescription: "This comprehensive operating systems simulator demonstrates the implementation and comparison of three fundamental CPU scheduling algorithms: First-Come-First-Served (FCFS), Shortest Job First (SJF), and Round Robin (RR). Built in Java, the simulator processes customer orders as jobs, providing detailed analytics on turnaround time, waiting time, and system efficiency. The project includes a user-friendly interface for inputting job parameters and visualizing scheduling results, making it an excellent educational tool for understanding operating systems concepts.",
+  fullDescription: "This project implemented a parallel solution for simulating the Abelian Sandpile, a two-dimensional cellular automaton where grains of sand topple between cells until reaching a stable state. Using Java’s fork/join framework, the grid was recursively divided into sub-tasks to exploit multi-core processors while avoiding data races. Extensive testing identified optimal sequential cut-offs to balance parallel overhead with runtime gains. Benchmarking across different machines showed significant speed-ups (up to 3.5×) for large grid sizes. The project highlighted challenges in workload partitioning, synchronization, and parallel algorithm design, demonstrating how parallelism transforms computationally heavy simulations into scalable, efficient processes.",
   githubUrl: "https://github.com/kavyaKaushik510/CPU-Processes-Scheduler",
   reportUrl: "/reports/CPU Process Scheduler.pdf",
-  skills: ["Java", "Operating Systems", "Algorithm Implementation", "Performance Analysis", "System Simulation"]
+  skills: ["Java", "Operating Systems", "Algorithm Implementation", "Performance Analysis", "System Simulation"],
+  course: "CSC3002F – Operating Systems"
 }, {
   id: "4",
   title: "PCP Albian Sandpile Simulation",
   image: projectSandpile,
-  techStack: ["C++", "Parallel Computing", "Multi-threading", "Simulation"],
+  techStack: ["Java", "Parallel Computing", "Multi-threading", "Simulation"],
   description: "A parallel sandpile simulation exploring grid-based overflow behavior using multi-threading in C++.",
-  fullDescription: "This project implements the Abelian Sandpile Model using advanced parallel computing techniques in C++. The simulation explores complex emergent behaviors in grid-based systems where sand grains topple according to simple local rules, creating fascinating patterns and avalanche dynamics. Utilizing multi-threading for optimal performance, the project demonstrates parallel algorithm design, thread synchronization, and efficient memory management. The simulation provides insights into self-organized criticality and complex systems behavior, making it valuable for both computational physics and parallel programming education.",
+  fullDescription: "This project implemented a parallel solution for simulating the Abelian Sandpile, a two-dimensional cellular automaton. Using the Java fork/join framework, the grid was recursively divided into smaller segments to eliminate data races and optimise execution. Extensive benchmarking on different machines demonstrated significant runtime improvements compared to the serial version, particularly for large grid sizes.",
   githubUrl: "https://github.com/kavyaKaushik510/PCP-Albian-Sandpile-Simulation",
   reportUrl: "/reports/albian.pdf",
-  skills: ["C++", "Parallel Computing", "Multi-threading", "Complex Systems", "Computational Physics"]
+  skills: ["C++", "Parallel Computing", "Multi-threading", "Complex Systems", "Computational Physics"],
+  course: "CSC2000S – Parallel Computing"
 }, {
   id: "5",
   title: "Socket Programming P2P",
   image: projectP2P,
   techStack: ["Python", "Network Programming", "Sockets", "P2P"],
   description: "Python-based peer-to-peer socket file sharing system with error checking and message acknowledgment.",
-  fullDescription: "This peer-to-peer file sharing system demonstrates advanced network programming concepts using Python sockets. The system implements reliable file transfer protocols with comprehensive error checking, message acknowledgment, and connection management. Features include multi-client support, file integrity verification, and robust error handling for network failures. The project showcases network protocol design, concurrent programming, and distributed systems principles, providing a solid foundation for understanding modern peer-to-peer architectures.",
+  fullDescription: "This project implemented a mini peer-to-peer file sharing system in Python, inspired by BitTorrent. The system consisted of a tracker (UDP server) to maintain available seeders, a seeder (TCP server) to distribute file chunks, and a leecher (TCP client) to download and reassemble files. Features included parallel downloads, SHA-256 based file integrity verification, automatic re-seeding after download, and a progress bar GUI. The design demonstrated how hybrid UDP/TCP architectures balance lightweight coordination with reliable data transfer. Robust error handling was integrated to manage failed downloads and inactive peers. This project provided a solid foundation in distributed systems, concurrency, and practical protocol design.",
   githubUrl: "https://github.com/kavyaKaushik510/Socket-Programming-P2P",
   reportUrl: "/reports/networks.pdf",
-  skills: ["Python", "Network Programming", "Socket Programming", "P2P Architecture", "Protocol Design"]
+  skills: ["Python", "Network Programming", "Socket Programming", "P2P Architecture", "Protocol Design"],
+  course: "CSC3002F – Computer Networks"
 }, {
   id: "6",
   title: "Micromouse Maze Solver",
   image: projectMicromouse,
-  techStack: ["C++", "Robotics", "Embedded Systems", "Algorithms"],
+  techStack: ["Simulink", "Robotics", "Embedded Systems", "Algorithms"],
   description: "A micromouse robot that autonomously navigates a maze using microcontroller logic and wall detection.",
-  fullDescription: "The Micromouse project involves designing and programming an autonomous robot capable of navigating through an unknown maze to reach its center in the shortest possible time. Implemented in C++ on embedded systems, the robot uses sophisticated wall-sensing algorithms, path planning strategies, and real-time decision making. The project combines mechanical design, sensor integration, and intelligent algorithms to create a competitive micromouse capable of learning maze layouts and optimizing its path. This project demonstrates expertise in robotics, sensor fusion, and autonomous navigation systems.",
+  fullDescription: "The Micromouse project involved designing and programming an autonomous robot to solve a maze and reach its center using the shortest path possible. The robot was built by integrating power, sensing, and control subsystems on a custom motherboard. MATLAB Simulink was used to program navigation logic, with sensors providing line-following and wall detection. Early implementations relied on left-hand wall following, while future work aimed to integrate the Flood Fill algorithm for optimal pathfinding. Challenges included sensor calibration, sunlight interference during demos, and fine-tuning motor control. The project emphasized real-world robotics trade-offs between hardware limitations and algorithmic ambition, giving experience in autonomous navigation and embedded control systems.",
   githubUrl: "https://github.com/ZuhayrHalday/EEE3088F-Micromouse-Project",
   reportUrl: "/reports/micromouse.pdf",
-  skills: ["C++", "Robotics", "Embedded Systems", "Path Planning", "Sensor Integration", "Autonomous Navigation"]
+  skills: ["C++", "Robotics", "Embedded Systems", "Path Planning", "Sensor Integration", "Autonomous Navigation"],
+  course: "EEE3097S – Electrical Engineering Design"
 }];
 
 export function ProjectsPage() {

@@ -77,9 +77,9 @@ export function ResumePage() {
                     <p className="text-muted-foreground text-sm">Selected after essays and case interviews</p>
                   </div>
                   <div className="border-l-2 border-secondary pl-6">
-                    <h4 className="text-lg font-semibold">Finalist, Global Youth Science Bowl</h4>
+                    <h4 className="text-lg font-semibold">Finalist, Global Youth Science and Technology Bowl - Hong Kong</h4>
                     <p className="text-primary font-medium mb-2">2021</p>
-                    <p className="text-muted-foreground text-sm">ML-based arrhythmia project — global award recipient</p>
+                    <p className="text-muted-foreground text-sm">ML-based arrhythmia project — Special award recipient</p>
                   </div>
                   <div className="border-l-2 border-secondary pl-6">
                     <h4 className="text-lg font-semibold">Finalist, Eskom Expo</h4>
@@ -110,7 +110,7 @@ export function ResumePage() {
                       company: "Sourcy",
                       date: "Jul 2025 – Present",
                       bullets: [
-                        "Analyzed TikTok datasets to uncover content trends",
+                        "Analysed Viral video datasets to uncover content trends",
                         "Built video-based computer vision pipelines",
                       ]
                     },
