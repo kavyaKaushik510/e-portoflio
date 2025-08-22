@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clean Portfolio Design System - White & Dark Teal Theme */
+
+@layer base {
+  :root {
+    /* Core Light Theme Colors */
+    --background: 0 0% 100%;
+    --background-secondary: 180 6% 96%;
+    --background-tertiary: 180 8% 94%;
+    --foreground: 180 100% 8%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-hover: 180 5% 98%;
+    --card-foreground: 180 100% 8%;
+
+    /* Popovers and Dialogs */
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 100% 8%;
+
+    /* Primary - Dark Teal */
+    --primary: 180 100% 15%;
+    --primary-glow: 180 100% 20%;
+    --primary-dark: 180 100% 10%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Teal */
+    --secondary: 180 20% 92%;
+    --secondary-foreground: 180 100% 8%;
+
+    /* Muted Elements */
+    --muted: 180 10% 95%;
+    --muted-foreground: 180 20% 45%;
+
+    /* Accent Colors */
+    --accent: 180 100% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and Inputs */
+    --border: 180 15% 85%;
+    --input: 0 0% 100%;
+    --ring: 180 100% 15%;
+
+    /* Design System Variables */
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 15%), hsl(180 100% 10%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%), hsl(180 6% 96%));
+    --gradient-section: linear-gradient(45deg, hsl(180 6% 96%), hsl(180 8% 94%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 50px hsl(180 100% 15% / 0.2);
+    --shadow-card: 0 10px 30px -5px hsl(180 100% 15% / 0.1);
+    --shadow-hover: 0 20px 40px -10px hsl(180 100% 15% / 0.15);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-light {
+    background: var(--gradient-light);
+  }
+  
+  .bg-gradient-section {
+    background: var(--gradient-section);
+  }
+
+  /* Shadow Utilities */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Transition Utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(180 100% 15% / 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(180 100% 15% / 0.6);
+  }
+}
